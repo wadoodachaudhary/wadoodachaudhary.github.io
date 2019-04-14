@@ -26,7 +26,7 @@ function status(statusText) {
 function showMetadata(metadataJSON,img) {
   const img_acc = document.getElementById('ModelAccuracy')
   img_acc.src =img
-  img_acc.style.width = "600px";
+  img_acc.style.width = "700px";
   img_acc.style.height = "300px";
   document.getElementById('vocabularySize').textContent =metadataJSON['vocabulary_size'];
   document.getElementById('maxLen').textContent =metadataJSON['max_len'];
