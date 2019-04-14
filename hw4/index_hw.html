@@ -1,0 +1,74 @@
+<!doctype html>
+
+<body>
+  <style>
+    textfield {
+      font-size: 120%;
+      width: 60%;
+      height: 200px;
+    }
+    textarea {
+        width: 250px;
+        height: 75px;
+    }
+
+  </style>
+  <h1>
+    Text Classification HW4 WadoodChaudhary (wc2595)
+  </h1>
+  <hr>
+  <div>
+    <select id="model-select" class="form-control">
+      <option value="model_base">Base Model</option>
+      <option value="model_rnn">RNN LSTM Model</option>
+    </select>
+  </div>
+
+  <div class="create-model">
+    <button id="load-model" style="display:none">Load model</button>
+  </div>
+
+  <div>
+    <div>
+      <span>Vocabulary size: </span>
+      <span id="vocabularySize"></span>
+    </div>
+    <div>
+      <span>Max length: </span>
+      <span id="maxLen"> </span>
+      <h3>Figure:</h3>
+        <img id="ModelAccuracy" src="model_js/model_none.png" width="10" height="10">
+  <hr>
+
+    </div>
+
+  </div>
+  <div>
+    <select id="example-select" class="form-control">
+      <option value="Book1">Anna Karenina</option>
+      <option value="Book2">Pride and Prejudice</option>
+      <option value="Book3">Brothers Karamazov</option>
+      <option value="Book4">The Prophet</option>
+
+    </select>
+  </div>
+
+  <div>
+    <textarea id="text-entry"></textarea>
+  </div>
+  <div class="predict">
+    <button id="predict" style="display:none">Execute</button>
+  </div>
+  <hr>
+  <div>
+    <span id="status">Standing by.</span>
+  </div>
+
+
+  <script src='https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js'></script>
+  <!--<script src='model_js/tf.min.js'></script>-->
+  <script src='index_hw.js'></script>
+</body>
+
+
+
