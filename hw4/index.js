@@ -10,6 +10,12 @@ const RNN_MODEL_URLS = {
   image: 'model_rnn/model_acc.png'
 };
 
+const LSTM_MODEL_URLS = {
+  model: 'model_lstm/model.json',
+  metadata: 'model_lstm/metadata.json',
+  image: 'model_lstm/model_acc.png'
+};
+
 MODEL_URLS = BASE_MODEL_URLS
 const examples = {
   'Book1':'He was quite a new man in the circle of the nobility of the Russia.',
@@ -183,8 +189,10 @@ async function setup() {
     modelSelect.addEventListener('change', () => {
          if (modelSelect.value=='model_base')
              MODEL_URLS = BASE_MODEL_URLS
-         else
+         else if (modelSelect.value=='model_rnn')
              MODEL_URLS = RNN_MODEL_URLS
+         else
+             MODEL_URLS = LSTM_MODEL_URLS
 
     });
     const testExampleSelect = document.getElementById('example-select');
